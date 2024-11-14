@@ -1,0 +1,211 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
+/* Navbar */
+.navbar-brand .logo {
+    width: 100px;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('images/bg-hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Menambahkan efek parallax */
+    width: 100%;
+    height: 650px;
+    padding: 50px 0;
+    color: #333;
+
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Fade-in animation for hero text */
+.hero-text {
+    max-width: 50%;
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+}
+
+.hero-text p {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.hero-text .oval-btn {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    width: 200px;
+    /* Menambahkan lebar tetap pada tombol */
+}
+
+.hero-image img {
+    width: 360px;
+    height: 360px;
+}
+
+.menu-section {
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Menu Section */
+.menu-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+
+.menu-section .menu-item {
+    position: relative;
+    background-color: #eea036;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-section .menu-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-section .menu-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-section .oval-btn {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: #ff4500;
+    color: white;
+    border: none;
+    width: 200px;
+    /* Menambahkan lebar tetap pada tombol */
+}
+
+.about-section {
+    background-color: #c7cbc1;
+    min-height: 100vh;
+}
+
+/* About Section */
+.about-section .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-section .about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Footer */
+footer {
+    color: white;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.menu-item .oval-btn {
+    transition: transform 0.3s ease;
+}
+
+.menu-item .oval-btn:hover {
+    animation: bounce 0.5s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    /* Center all elements except the logo */
+    .hero-section,
+    .menu-section,
+    .about-section,
+    footer {
+        text-align: center;
+    }
+
+    .hero-section {
+        min-height: 100vh;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .navbar-brand {
+        text-align: left;
+    }
+
+    /* Resize hero image */
+    .hero-section .hero-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Menu items stacking vertically */
+    .menu-section .row .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* About section stacking */
+    .about-section .container {
+        flex-direction: column;
+    }
+
+    .info-contact {
+        font-size: 11px;
+    }
+}
